@@ -1,4 +1,4 @@
-
+//github test
 /***************************** Task1 *************************/
 /*  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters
     a function that takes an infinite number of arguments is a Variadic Function
