@@ -7,6 +7,16 @@
 ****************************************************************************/
 
 /***************************** Task1 *************************/
+/*  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters
+    a function that takes an infinite number of arguments is a Variadic Function
+
+    The rest parameter syntax allows a function to accept an indefinite number of 
+    arguments as an array, providing a way to represent variadic functions in JavaScript. 
+    Syntax:
+    (...paramName)
+    Ex:
+    function functName(...infiniArgs){}
+    */
 // displays average of all number arguments
 // displays highest value in all number arguments
 function playNumbers(...myParam)
@@ -24,7 +34,6 @@ function playNumbers(...myParam)
         }
     }
 
-    // check if there are any args passed thru function
     if (myParam.length < 1)
     {
         console.log("There are no inputs.");
@@ -58,7 +67,9 @@ function playNumbers(...myParam)
 
         console.log("The largest number of ("+ myParam +") is " + valueChecker);
         console.log("The average of ("+ myParam +") is "+ averageValue);
+
     }
+    return void 0;  ////////////////////////////////////////////////////////////////////
 }
 
 console.log("/***************************** Task1 *************************/");
@@ -73,29 +84,47 @@ playNumbers("Good day!",3,4,32,"hi", "we");
 function convertCF(val, cf)
 {
     var convertedTemp = 0;
-    //var x = parseInt(val);
+    var x = parseInt(val);
+    //console.log("isnan():"+ isNaN("22"));
+    //console.log("isnan(val):"+ isNaN(val));
 
-    // check if cf arg is valid
+
+    //if (typeof val != "number")
     if (cf != 'C' && cf != 'F')
+    //if (typeof val == "string" && x == NaN)
+    //if (typeof val != 'number' && x == NaN)
     {
+        //console.log("x:"+x);
+        //console.log("val:"+val);
+        //console.log("typeopf val= "+typeof val);
+
+        //console.log("typeopf parseintval= "+typeof parseInt(val));
+        //console.log("parseintval= "+parseInt(val));
+        //console.log("I need a number");
         console.log("I am confused :(");
+
     }
-    // check if val arg is valid
+    //else if (cf != "C"||'C'||"F"||'F')
+    //else if (cf != 'C' && cf != 'F')
     else if (typeof val != "number")
     {
+        //console.log("I am confused :(");
         console.log("I need a number");
+
     }
     else
     {
-        // convert from Celcius to Farenheit
+        // calculate conversions
+        //if (cf == "C" || 'C')
         if (cf == 'C')
         {
             convertedTemp = (val * (9/5)) + 32;
             console.log( val + "C is equivalent to " + convertedTemp + "F.");
         }
-        // convert from Farenheit to Celsius
+        //else if (cf == "F" || 'F')
         else if (cf == 'F')
         {
+            //console.log("typeopf val= "+typeof val);
             convertedTemp = (val - 32) * (5/9);
             console.log( val + "F is equivalent to " + convertedTemp + "C.");
         }
@@ -105,6 +134,11 @@ function convertCF(val, cf)
 console.log("/***************************** Task2 *************************/");
 convertCF("avc", "F");  // I need a number.
 convertCF("32", "M");   // I am confused :(
-convertCF(32, 'F');     // 32F is equivalent to 0C 
-convertCF(0, "C");      // 0C is equivalent to 32F 
-convertCF(122, "F");    // 122F is equivalent to 50C
+convertCF(32, 'F'); // 32F is equivalent to 0C 
+convertCF(0, "C");  // 0C is equivalent to 32F 
+convertCF(122, "F");// 122F is equivalent to 50C
+
+/***************************** Task3 *************************/
+// hwllo
+
+/***************************** Task4 *************************/
