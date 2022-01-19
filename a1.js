@@ -64,8 +64,8 @@ function playNumbers(...myParam)
     }
     return void 0;  ////////////////////////////////////////////////////////////////////
 }
-console.log("/***************************** Task1 *************************/");
 
+console.log("/***************************** Task1 *************************/");
 playNumbers();
 playNumbers("abc", 3, "hello");
 playNumbers(9, 3, 6);
@@ -77,29 +77,50 @@ playNumbers("Good day!",3,4,32,"hi", "we");
 function convertCF(val, cf)
 {
     var convertedTemp = 0;
+    var x = parseInt(val);
+    console.log("x:"+x);
+    console.log("val:"+val);
 
-    if (typeof val != "number")
+
+    //if (typeof val != "number")
+    //if (typeof val == "string" && x == NaN)
+    if (typeof val != 'number' && x == NaN)
     {
+        console.log("typeopf val= "+typeof val);
+        //console.log("typeopf parseintval= "+typeof parseInt(val));
+        //console.log("parseintval= "+parseInt(val));
         console.log("I need a number");
     }
-    else if (cf != "C" || "F")
+    //else if (cf != "C"||'C'||"F"||'F')
+    else if (cf != 'C' && cf != 'F')
     {
         console.log("I am confused :(");
     }
     else
     {
-        if (cf == "C")
+        // calculate conversions
+        //if (cf == "C" || 'C')
+        if (cf == 'C')
         {
-            
+            convertedTemp = (val * (9/5)) + 32;
             console.log( val + "C is equivalent to " + convertedTemp + "F.");
         }
-        else if (cf == "F")
+        //else if (cf == "F" || 'F')
+        else if (cf == 'F')
         {
-            
+            console.log("typeopf val= "+typeof val);
+            convertedTemp = (val - 32) * (5/9);
             console.log( val + "F is equivalent to " + convertedTemp + "C.");
         }
     }
 }
+
+console.log("/***************************** Task2 *************************/");
+convertCF("avc", "F");  // I need a number.
+convertCF("32", "M");   // I am confused :(
+convertCF(32, 'F'); // 32F is equivalent to 0C 
+convertCF(0, "C");  // 0C is equivalent to 32F 
+convertCF(122, "F");// 122F is equivalent to 50C
 
 /***************************** Task3 *************************/
 
