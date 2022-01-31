@@ -53,10 +53,27 @@ var totalHours = 0;
 for (var i = 0 ; i < courses.length ; i++)
 {
     totalHours += courses[i].hours;
-    console.log("courses[i].code: "+courses[i].code);
-    console.log("courses[i].hours: "+courses[i].hours);
 }
 
 console.log("Total hours for all courses: ", totalHours, "hours.");
 
 /***************************** Task2 *************************/
+
+// task2: a) Create a constructor function (named: Student) which will be used to create objects
+// https://www.w3schools.com/js/js_object_constructors.asp
+
+function Student(stuName, dob, sid, prgrm, gpa) {
+    this.studentName = stuName;
+    this.dateBirth = dob;
+    this.stuID = sid;
+    this.program = prgrm;
+    this.stuGPA = gpa;
+}
+
+var today = new Date();
+toLocaleString();
+
+const myFather = new Studnet("John", "3/4/2002", 50, "blue");
+
+Student.prototype.toString();
+  
