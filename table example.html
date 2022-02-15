@@ -1,0 +1,84 @@
+<!DOCTYPE html> <!--necessary, declares we're using HTML !-->
+<html>
+    <head>
+        <title>Table</title>
+    </head>
+    <body>
+        <a href="https://www.senecacollege.ca/home.html" target="_blank">Seneca College</a>
+        <!--target="_blank" attribute opens link to new tab-->
+        <a href="DOCTYPE html.htm">First Page</a>
+        <a href="/Users/beb/Desktop/BTI 225 Web Programming Principles/2ndPage.html">Second Page</a>
+        <a href="">Second Page</a>
+        <!-- if the file is in the same folder, you can just href the name (PROPER SPELLING)
+        if it's in a seperate folder, you have to use ABSOLUTE pathnames as well.
+        dont forget like in unix you can use ../ / or ./ -->
+        <br><a href="mailto:lmedina-perez@myseneca.ca">Email me</a>
+        <br>
+        <!--just puppy pic-->
+        <img src="./dog-puppy-on-garden-royalty-free-image-1586966191.jpg" alt="Puppy pic" width="50" height="50">
+        <!--clickable puppy pic-->
+        <a href="https://www.countryliving.com/uk/wildlife/pets/advice/a2899/buying-puppy-tips/">
+            <img src="./1511194376-cavachon-puppy-christmas.jpg" alt="Puppy pic" width="50" height="40">
+        </a> <!--inside a tag for clickable-->
+        <h2>Hello World.</h2>
+        <h2> Table Example</h2>
+        <table border="1"> <!--table tag + attribute (only use while not using css)-->
+            <caption>Class BTI225</caption>  <!--thead stands for table head element-->
+            <thead style="background-color:cadetblue;">
+            <tr> <!--table row-->
+                <th>First Name </th> <!--table head (first column)-->
+                <th>Last Name </th> <!--table head (2nd column)-->
+                <th>Student ID </th> <!--colummn-->
+                <th>Subject </th> <!--colummn-->
+                <th>Mark </th> <!--colummn-->
+            </tr>
+            </thead>
+            <tbody style="background-color:cornsilk;">
+            <tr>
+                <td>Jack</td> <!--table data (first row)-->
+                <td>White</td> <!--table data (2nd row)-->
+                <td>1001</td> <!--table data (3rd row)-->
+                <td rowspan="2">Web Programming</td> <!--rowspan attribute merges two rows-->
+                <td>90</td> <!--row-->
+            </tr>
+            <tr>
+                <td>Kate</td> <!--table data (first row)-->
+                <td>Brown</td> <!--table data (2nd row)-->
+                <td>1002</td> <!--table data (3rd row)-->
+                <!--<td>Web Programming</td> commented out due to previous rowspan (to not push out other data)-->
+                <td>87</td> <!--row-->
+            </tr>
+            <tr>
+                <td>Layla</td> <!--table data (first row)-->
+                <td>Medina</td> <!--table data (2nd row)-->
+                <td>118404219</td> <!--table data (3rd row)-->
+                <td>BTI225</td> <!--row-->
+                <td>100</td> <!--row-->
+            </tr>
+            <tr>
+                <td colspan="2">Tom Johnson</td> <!--merge column-->
+                <td>1003</td> <!--table data (3rd row)-->
+                <td>C++</td> <!--row-->
+                <td>90</td> <!--row-->
+            </tr>
+            <tr>
+                <td>Bob</td> <!--table data (first row)-->
+                <td>Smith</td> <!--table data (2nd row)-->
+                <td>1004</td> <!--table data (3rd row)-->
+                <td>C++</td> <!--row-->
+                <td>90</td> <!--row-->
+            </tr>
+            </tbody>
+            <tfoot style="background-color: greenyellow;">
+            <tr>
+                <td>Note</td> <!--table data (first row)-->
+                <td colspan="4">Here is a note for this table.</td> <!--table data (2nd row)-->
+                <!--colspan=4 and colspan="4" : in HTML5, quotes are not necessary
+                     but old syntax DOES require quotes. additionally, some attributes require 
+                     quotes where othes don't so to ensure backwards compatibility
+                     as well as uniform coding, just use quotes.-->
+            </tr>
+        </tfoot>
+        </table> <!--table tag-->
+    </body>
+</html>
