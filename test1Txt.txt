@@ -1,0 +1,93 @@
+QUESTION 1
+
+Write a JavaScript function (calcComm) to calculate how much commission the sales person can get in a transaction.
+
+Display money with 2 decimals.
+
+*** This function takes four parameters:                                                                   [1 mark]
+
+number, how many items sold,
+price, the price for each item in dollar,
+position, this determines the commission rate.                                                    [3 marks]
+--- for position "Manager", commission rate is 10% of the total sales amount
+
+--- for position "Lead", commission rate is 5% of the total sales amount
+
+--- for other positions, commission rate is 2% of the total sales amount
+
+bonus. It ranges from 0 to 100 inclusive. E.g.,                                                        [3 marks]
+if bonus is 20, it means 20% of the total sales amount.
+if bonus is out of this range, your program reports:
+===== Your name's Company ===== Bonus error. Program terminates.
+
+and program terminates (you can simply include the following statement in your function. return;
+
+*** The final commission is determined by                                                    [calculation: 3 marks] the total amount of the sales (number * price),
+
+plus the bonus,
+
+then multiplied by the rate for that position
+
+ 
+
+*** Display/ output (refer to the sample output):
+
+display a header:                                                                                                                                                      [1 mark]
+===== Your name's Company ===== change "Your name" with your name
+
+in the function, display the result following the format below in two cases:
+[display: 8 marks]
+
+if there is a bonus, your function displays:
+You commission is $(total amount of the commission from your calculation)
+
+ 
+
+when you sell (the number of) items at the price of $(the price) as (position) with bonus of (bonus)%.
+
+if there is no bonus, your function displays:
+You commission is $(total amount of the commission from your calculation) when you sell (the number of) items at the price of $(the price) as (position).
+
+Note: expected to display the information in the format as the sample output.
+
+ 
+
+*** Test your function with the following statements. The corresponding display/ output follows. calcComm(2, 20, "Manager", 30);
+
+calcComm(2, 20, "Lead");
+
+calcComm(2, 20, "Bob");
+
+calcComm(2, 20, "ABC", 300);
+
+ 
+
+*** output:
+
+===== Sunny's Company =====
+
+Your commission is $5.20
+
+when you sell 2 items at the price of $20 as Manager with bonus of 30%.
+
+ 
+
+===== Sunny's Company =====
+
+You commission is $2.00
+
+when you sell 2 items at the price of $20 as Lead at regular payment.
+
+ 
+
+===== Sunny's Company =====
+
+You commission is $0.80
+
+when you sell 2 items at the price of $20 as Bob at regular payment.
+
+ 
+
+===== Sunny's Company ===== Bonus error. Program terminates.
+
+For the toolbar, press ALT+F10 (PC) or ALT+FN+F10 (Mac).

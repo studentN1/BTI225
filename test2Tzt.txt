@@ -1,0 +1,113 @@
+QUESTION 1
+
+You are going to write a JavaScript program to accomplish the following task. Refer to sample output below. Note: please use the same data for testing.
+
+Task1:
+
+Create an array of 4 customers, each customer is an object, with the following 3 properties and 1 function. properties:
+
+firstName: string, customer's first name lastName: string, customer's last name
+
+moneySpent: array of 3 numbers which stands for the money the customer spent for 3 products e.g, [ 1080.89, 783.23, 68.09]
+
+which means this customer spent $1080.89 for "product1",
+
+$783.23 for "product2",
+
+$68.09 for "product3"
+
+function:
+
+getTotal: calculate the total amount the customer spent for the three products, and return that total amount.
+
+Task2:
+
+For each customer, display the information as follows:
+
+(first name last name) is a
+
+( level ) customer for ( product1 ),
+
+( level ) customer for ( product2 )
+
+( level ) customer for ( product3 )
+
+In total, he spent $(total amount, obtained from the above object function: getTotal()).
+
+where: level is one of the following under the corresponding condition:
+
+"super": if the customer spent over and including $1000
+
+"good": if the customer spent over and including $500 and less than $1000 "potential": if the customer spent less than $500
+
+ 
+
+refer to the following sample output.
+
+ 
+
+Important: You can hard code the data for the 4 customers, but cannot hard-code the calculation or the display. Your program should be able to easily extend to 10 or 1000 customers in the future.
+
+ 
+
+Data:
+
+You need to construct the array of 4 customer objects based on the following data: First Name | Last Name | Money Spent for (product1, product2, product3)
+
+========================================================================
+
+"First1"      "Last1"       1080.89, 783.23, 68.09
+
+"First2"      "Last2"       80.89, 73.23, 1368.09
+
+"First3"      "Last3"       580.89, 7083.23, 608.09
+
+"First4"      "Last4"       100.89, 1783.23, 6.09
+
+ 
+
+Sample output: first1 last1 is a
+
+Super customer for product1, good customer for product2, potential customer for product3.
+
+ 
+
+In total, he spent $1932.21 for all products.
+
+===============================================
+
+ 
+
+first2 last2 is a
+
+potential customer for product1, potential customer for product2, Super customer for product3.
+
+ 
+
+In total, he spent $1522.21 for all products.
+
+===============================================
+
+ 
+
+first3 last3 is a
+
+good customer for product1,
+
+Super customer for product2, good customer for product3.
+
+ 
+
+In total, he spent $8272.21 for all products.
+
+===============================================
+
+ 
+
+first4 last4 is a
+
+potential customer for product1, Super customer for product2, potential customer for product3.
+
+ 
+
+In total, he spent $1890.21 for all products.
