@@ -1,0 +1,22 @@
+// Q1:Task1
+const ronaldReagan = { name: "Ronald Reagan", tookOffice: 1981, leftOffice: 1989};
+const georgeBushSr = { name: "George Bush", tookOffice: 1989, leftOffice: 1993};
+const billClinton = { name: "Bill Clinton", tookOffice: 1993, leftOffice: 2001};
+const georgeBushJr = { name: "George Bush", tookOffice: 2001, leftOffice: 2009};
+
+usPresident = [ronaldReagan, georgeBushSr, billClinton, georgeBushJr];
+
+// Q1:Task2
+function searchPresident(inputName)
+{
+    for (var i = 0; i < usPresident.length(); i++) 
+    {
+        if (usPresident[i].name.includes(inputName))
+        {
+            console.log(usPresident[i].name + "took office in: " + usPresident[i].tookOffice + "and left office in: " + usPresident[i].leftOffice);
+        }
+        console.log(i + ": " + courses[i].code);
+    }
+}
+
+function searchPresident(George)
