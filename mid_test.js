@@ -29,7 +29,8 @@ function searchPresident(inputName)
         return foundPres;
     }
 }
-
+// --------------------------------- TEST --------------------------------------------------
+// *** Test your function with the following statements.
 console.log(searchPresident("Ron"));
 console.log(searchPresident("ron"));
 console.log(searchPresident("George"));
