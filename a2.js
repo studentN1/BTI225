@@ -7,7 +7,6 @@
 ****************************************************************************/
 
 /***************************** Task1 *************************/
-// Create an array of objects called courses. Each course in the array should have the 
 
 //define and create an object
 const APC100 = {code: "APC100", courseName: "Applied professional communication", hours: 3, url: "http:/www.senecacollege.ca"};
@@ -16,6 +15,7 @@ const ULI101 = {code: "ULI101", courseName: "Linux and the Internet", hours: 4, 
 const IOS101 = {code: "IOS110", courseName: "Windows Operating System", hours: 4, url: "http:/www.senecacollege.ca/ios"};
 const EAC150 = {code: "EAC150", courseName: "College English", hours: 3, url: null };
 
+// Create an array of objects called courses. Each course in the array should have the 
 var courses = [APC100, IPC144, ULI101, IOS101, EAC150]; // courses array of objects (no longer an array of arrays)
 
 // test: checks array vv
@@ -40,7 +40,7 @@ const BTI225 = {code: "BTI225", courseName: "Web Programming Principles", hours:
 // task1: d) add the course object to the end of the courses array
 courses.push(BTI225);
 
-// task1: e) e. Use for loop to loop through the course array in order to add the hours of the courses + log the total hours in the console
+// task1: e) Use for loop to loop through the course array in order to add the hours of the courses + log the total hours in the console
 var totalHours = 0;
 for (var i = 0 ; i < courses.length ; i++)
 {
@@ -48,10 +48,6 @@ for (var i = 0 ; i < courses.length ; i++)
 }
 
 console.log("Total hours for all courses: ", totalHours, "hours.");
-
-
-
-
 
 
 /***************************** Task2 *************************/
