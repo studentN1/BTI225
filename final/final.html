@@ -1,113 +1,109 @@
 <!DOCTYPE html>
  <html>
   <head>
-	  <!-- Task 1: update Student Name with your name -->
-	<title>Layla Medina Perez</title>
+   <!-- Specification 8.1:This document (final.html) has a title “Final Exam”.  -->
+	<title>Final Exam</title>
 	<meta charset="UTF-8" />
 	<meta name = "viewport" content = "width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="css/normalize.css"/>
-	<link rel="stylesheet" href="css/a3-theme.css"/>
+	<link rel="stylesheet" href="css/final.css"/>
 </head>
 <body>
+    <div class="main center">
+        <!-- Specification 8.2: Text “Declaration” is in heading 2.-->
+        <h2>Declaration:</h2>
+        <!-- Specification 8.3: Display the Declaration text “I declare…” as paragraph.-->
+        <p>  
+            I declare that this test is my own work in accordance with Seneca Academic Policy. No part of this work has been copied manually or electronically from any other source (including 3rd party web sites) or distributed to other students. I aknowledge that by beginning this test, I will abide by the above.
+            <!-- Specification 8.4: Display text “Name:” and “Student Number:” in bold.-->
+            <br>
+            <br>
+            <b>Name:</b>
+            <!-- Specification 8.5: Replace text “(your name)” and "(your student number)" Both are displayed with underline -->
+            <u>(Layla Medina Perez)</u>
+            <!-- Specification 8.4: Display text “Name:” and “Student Number:” in bold.-->
+            <b>Student Number:</b>
+            <!-- Specification 8.5: Replace text “(your name)” and "(your student number)" Both are displayed with underline -->
+            <u>(118404219)</u>
+        </p>
+        <!-- Specification 8.6: Display the horizontal line -->
+        <hr>
+        <!-- Specification 8.7: Text “Course Information” is in heading 2. -->
+        <h2>Course Information</h2>
+        <!-- Specification 8.8: Search Box and the buttons are in the same form -->
+        <form action="/action_page.php">
+            <label for="fname"></label>
+            <input type="text" id="courseCode" placeholder="Enter a course code">
+            <button type="button" onclick="alert('Hello World!')">Search by Course Code</button>
+            <button type="button" onclick="alert('Hello World!')">Clear Search Result</button>
+            <br><br>
 
-	<header>
-		<div class="center">
-			<h2>
-				Web Programming Assignment
-			</h2>
-		</div>
-	</header>
-	<nav>
-		<div class="center">
-            <ul>	
-                <li><a href="index.html">Home</a>
-                     <!-- click text "Home", direct to page index.html -->
-                </li>
-                <li><a href="list.html">List</a>
-                    <!-- click text "List", direct to page list.html -->
-                </li>
-                <li><a href="table.html">Table</a>
-                    <!-- click text "Table", direct to page table.html -->
-                </li>
-                <li><a href="image.html">Image</a>
-                    <!-- click text "Image", direct to page image.html -->
-                </li>
-                <li><a href="audio.html">Audio</a>
-                    <!-- click text "Audio", direct to page audio.html -->
-                </li>
-                <li><a href="video.html">Video</a>
-                    <!-- click text "Video", direct to page video.html -->
-                </li>
-                <li><a href="seneca.html">Seneca</a>
-                    <!-- click text "Seneca", direct to page seneca.html -->
-                </li>
-                <li><a href="a4_dom.html">A4 DOM</a>
-                    <!-- click text "A4 DOM", direct to page a5Store.html -->
-                </li>            
-                <li><a href="a5Store.html">A5 Store</a>
-                    <!-- click text "A5 Store", direct to page a5Store.html -->
-                </li>
-                <li><a href="a5ContactUs.html">A5 Contact Us</a>
-                    <!-- click text "A5 ContactUs", direct to page a5ContactUs.html -->
-                </li>
-                <li><a href="Test3.html">Test3</a>
-                    <!-- click text "Test3", direct to page a5Store.html -->
-                </li>
-                <li><a href="Test4.html">Test4</a>
-                    <!-- click text "Test4", direct to page a5Store.html -->
-                </li>
-                <li><a href="final.html">Final</a>
-                    <!-- click text "A4 DOM", direct to page a5Store.html -->
-                </li>
-                <li><a href="honesty.html">Honesty</a>
-                    <!-- click text "Honesty", direct to page honesty.html -->
-                </li>
-            </ul>
-		</div>
-	</nav>
-		
+            <!--<div class="Course registration">-->
+            <!-- <div class="course-registration"> -->
+            <fieldset class="course-registration">
+                <legend>Course Registration</legend>
+                <!-- <fieldset><legend>Course Registration</legend></fieldset> -->
+
+                <!-- Specification 8.11: (b) “Program”: displays “BSD” as default. User cannot change it. -->
+    <!--Specification 8.11: (b) “Program”: displays “BSD” as default(value=). User cannot change it(readonly). -->
+                <label for="program" class="left-labels" >Program:</label>
+                <input type="text" id="program" value="BSD" readonly> 
+                <br><br>
+                <!-- Specification 8.11: (c) "Student Name": required. The box size is 50 characters wide. This field displays a hint-->
+    <!-- Specification 8.11: (c) "Student Name": required(required). The box size is 50 characters wide(size=). This field displays a hint(placeholder=)-->
+<!-- NOT DONE: Specification 8.11: (c) Validation: Note: validate using JavaScript, not HTML5 pattern attribute-->                
+                <label for="stuName" class="required-field">Student<br>Name:</label>
+                <input type="text" id="stuName" placeholder="Enter name including only Alphabet, apostrophe, and space." size="50" required>
+                <br><br>
+                <!-- Specification 8.11: (d) “Student Number”: required. Number. Minimum 210000, maximum 219999. -->
+                <label for="stuNum" class="required-field">Student<br>Number:</label>
+                <input type="text" id="stuNum" min="210000" max="219999" required>
+                <br><br>
+                <!-- Specification 8.11: (e) "Semester": User can choose only one from : "Winter", "Summer", or “Fall”. User can click the circle or the text -->
+                <label for="semester" class="left-labels" >Semester:</label>
+                <input type="radio" id="Winter" name="semester" value="Winter">
+                <label for="Winter">Winter</label>
+                <input type="radio" id="Summer" name="semester" value="Summer">
+                <label for="Summer">Summer</label>
+                <input type="radio" id="Fall" name="semester" value="Fall">
+                <label for="Fall">Fall</label>
+                <br><br>
+                <!-- Specification 8.11:(f) "Courses": is a drop-down menu that displays three options at once. can select multiple courses from the list, Preselect "BTI225" -->
+<!-- Specification 8.11:(f) "Courses": is a drop-down menu(select) that displays three options at once(size=3). can select multiple courses from the list(multiple), Preselect "BTI225" (selected)-->
+                <label for="courses" class="left-labels" >Courses:</label>
+                <select id="courses" name="courses" size="3" multiple>
+                    <option value="btp100">BTP100</option>
+                    <option value="bti225" selected>BTI225</option>
+                    <option value="bti325">BTI325</option>
+                    <option value="“bti425”">BTI425</option>
+                </select>
+                <br><br>
+                <!-- Specification 8.11: (g) “Note”: user can enter multi-line text. The size of the box is 30 characters width and 2 rows tall.-->
+                <label for="note" class="left-labels" >Note:</label>
+                <textarea name="message" rows="2" cols="30">
+                </textarea>
+                <br><br>
+                <!-- Specification 8.11: (h) "Register": This button submits the form -->
+                <input type="submit" value="Register"> 
+                <!-- Specification 8.11: (i) "Reset": This button clears the form of all entered data -->
+                <input type="reset" value="Reset">
+            </fieldset>
+        </form>
+    </div>
+	<!-- Specification 8.4: -->
+
 	<section class="main center">
-	
-	<!-- Task 3: create the nested lists as instruction on a3.pdf -->
 
-	<!-- <p> create the nested lists as instruction on a3.pdf </p> -->
-	<h2>HTML Lists</h2>
-	<ul><!--list1-->
-		<li>Australia</li>
-		<li>Canada</li>
-		<ol>
-			<li>Ontario</li>
-			<ul><!--list2-->
-				<li>Toronto</li>
-				<li>North York</li>
-				<li>Markham</li>
-				<li>Windsor</li>
-			</ul>
-			<li>Quebec</li>
-			<li>BC</li>
-			<li>Alberta</li>
-		</ol>
-		<li>China</li>
-		<li>Finland</li>
-		<li>France</li>
-		<li>U.S.</li>
-	</ul>
+    <mark>
+		<script>
+			var dt=new Date(document.lastModified); document.write('This page was last updated on '+dt.toLocaleString()) ;
+		</script>
+	</mark>
 	
 	<!-- End your code here  -->
 	
 	</section>
 	<!-- Task 4: Include timestamp here-->
-	<mark>
-        <script>
-            var dt=new Date(document.lastModified); document.write('This page was last updated on '+dt.toLocaleString()) ;
-        </script>
-    </mark>
+
     <!-- Task 5: update Student Name with your name -->
-	
-	<footer>
-	  <div class="center">
-		  &copy; 2022 Layla Medina Perez
-	  </div>
-	</footer>
 </body>
 </html>	  
