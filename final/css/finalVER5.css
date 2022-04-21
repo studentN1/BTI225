@@ -1,5 +1,5 @@
-/*  Specification 8.12: (a) You must use external CSS (final.css).
-*/
+/*  Specification 8.12: (a) You must use external CSS (final.css). */
+
 html {
   font-family: sans-serif; /* 1 */
   -ms-text-size-adjust: 100%; /* 2 */
@@ -11,8 +11,8 @@ html {
     -aligned to the horizontal center of the screen.
     -The top and bottom paddings of the content are 1em.
     -The left and right paddings of the content are 2em. 
-    -The background color is rgb(252, 252, 249).
-*/
+    -The background color is rgb(252, 252, 249).*/
+
 body {
 
     width: 70%;
@@ -44,8 +44,8 @@ fieldset {
 
 /* Specification 8.12: (c) 
    -The area “Course Registration” has the background color “bisque”
-   -text color “blue”.
-*/
+   -text color “blue”.*/
+
 .course-registration {
 
     background-color: bisque;
@@ -53,8 +53,8 @@ fieldset {
 }
 
 /* Specification 8.12: (d) 
-   -The red asterisk (*) need to be defined as displayed in screenshot #2.
-*/
+   -The red asterisk (*) need to be defined as displayed in screenshot #2. */
+
 .required-field::before {
     content: "*";
     color: red;
@@ -65,9 +65,10 @@ fieldset {
    -They are defined as “inline-block”, width 5em. 
    -The top and bottom paddings are 0px, 
    -while the left and right paddings are 0.5em.
-   -The labels are aligned to right as displayed in screenshot #2.
-*/
-.left-labels, .required-field { 
+   -The labels are aligned to right as displayed in screenshot #2.*/
+
+
+.left-labels, .required-field { /* all labels on left side: under class=left-labels AND including class=required-field*/
     display: inline-block;
     width: 5em;
     padding-top: 0px;
@@ -75,4 +76,66 @@ fieldset {
     padding-left: 0.5em;
     padding-right: 0.5em;
     text-align: right;
+}
+
+/*
+
+.course-registration label :not() {
+    display: inline-block;
+    width: 5em;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    text-align: right;
+}
+
+
+.contol {
+    display: inline-block;
+    width: 5em;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    text-align: right;
+}
+
+.required-field {
+    display: inline-block;
+    width: 5em;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    text-align: right;
+}
+
+div.course-registration label {
+    display: inline-block;
+    width: 5em;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    text-align: right;
+}
+
+div.radio-inputs {
+
+    display: inline-block;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    text-align: left;
+}
+div.radio-inputs label {
+
+    display: inline-block;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    text-align: left;
 }

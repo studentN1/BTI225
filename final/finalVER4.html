@@ -36,6 +36,8 @@
                 <!-- Specification 8.9: The box with the hint “Enter a course code” allows user to input one-line text. When user types, the hint disappears. -->
                 <label for="courseCode"></label>
                 <input type="text" id="userCourseCode" placeholder="Enter a course code">
+                <!--<button type="button" onclick="Javascript:addTable()">Search by Course Code</button>-->
+                <!--<input type="button" id="create" value="Click here" onclick="Javascript:addTable()">-->
                 <button type="button" onclick="Javascript:addTable()">Search by Course Code</button>
                 <button type="button" onclick="Javascript:deleteRow()">Clear Search Result</button>
             </div>
@@ -43,14 +45,17 @@
             <!--<div class="Course registration">-->
             <fieldset class="course-registration">
                 <legend>Course Registration</legend>
+
                 <!-- Specification 8.11: (b) “Program”: displays “BSD” as default. User cannot change it. -->
+    <!--Specification 8.11: (b) “Program”: displays “BSD” as default(value=). User cannot change it(readonly). -->
                 <p class="left-labels" >Program:</p>
                 <input type="text" id="program" value="BSD" readonly> 
                 <br><br>
                 <!-- Specification 8.11: (c) "Student Name": required. The box size is 50 characters wide. This field displays a hint-->
+    <!-- Specification 8.11: (c) "Student Name": required(required). The box size is 50 characters wide(size=). This field displays a hint(placeholder=)-->
+<!-- NOT DONE: Specification 8.11: (c) Validation: Note: validate using JavaScript, not HTML5 pattern attribute-->                
                 <label for="stuName" class="required-field">Student<br>Name:</label>
-                <input type="text" id="stuName" onclick="Javascript:stuNumCheck()" placeholder="Enter name including only Alphabet, apostrophe, and space." size="50" required>
-                <!--<input type="text" id="stuName" placeholder="Enter name including only Alphabet, apostrophe, and space." size="50" required>-->
+                <input type="text" id="stuName" placeholder="Enter name including only Alphabet, apostrophe, and space." size="50" required>
                 <br><br>
                 <!-- Specification 8.11: (d) “Student Number”: required. Number. Minimum 210000, maximum 219999. -->
                 <label for="stuNum" class="required-field">Student<br>Number:</label>
@@ -66,6 +71,7 @@
                 <label for="Fall">Fall</label>
                 <br><br>
                 <!-- Specification 8.11:(f) "Courses": is a drop-down menu that displays three options at once. can select multiple courses from the list, Preselect "BTI225" -->
+<!-- Specification 8.11:(f) "Courses": is a drop-down menu(select) that displays three options at once(size=3). can select multiple courses from the list(multiple), Preselect "BTI225" (selected)-->
                 <p class="left-labels" >Courses:</p>
                 <select id="courses" name="courses" size="3" multiple>
                     <option value="btp100">BTP100</option>
@@ -80,7 +86,7 @@
                 </textarea>
                 <br><br>
                 <!-- Specification 8.11: (h) "Register": This button submits the form -->
-                <input type="submit" value="Register" href="https://httpbin.org/post"> 
+                <input type="submit" value="Register"> 
                 <!-- Specification 8.11: (i) "Reset": This button clears the form of all entered data -->
                 <input type="reset" value="Reset">
             </fieldset>
